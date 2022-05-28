@@ -1,0 +1,747 @@
+/**
+    ESTILOS COMUNES
+    ---------------
+**/
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format('truetype');
+    /* bug de chrome con esta fuente */
+    font-weight: 1 999;
+    font-weight: 400 600 900;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contenido {
+    min-width: 400px; 
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 992px) {
+    .contenido {
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+} 
+
+
+/**
+    ESTILOS PARA LA CABECERA
+    ------------------------
+**/
+
+header {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    background-color: #FFF;
+    min-width: 400px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+} 
+
+header img {
+    width: 50%;
+    height: auto;
+}
+
+nav {
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    list-style-type: none; 
+    font-weight: 600;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+nav a {
+    color: #2A2A2A;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+nav a:hover { 
+    color: #79BAAB;
+}
+
+.activo {
+    color: #2A2A2A;
+    font-weight: 900;
+    padding-bottom: 5px;
+    border-bottom: 2px dashed #2A2A2A;
+}
+
+/**
+    ESTILOS PARA LA CABECERA - LG
+    -----------------------------
+**/
+
+@media screen and (min-width: 992px) {
+    header .contenido {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header a:first-of-type {
+        text-align: start;
+    }
+
+    header nav {
+        margin: 0;
+        text-align: end;
+        width: 60%;
+        display: flex;
+        justify-content: end;
+    }
+
+    nav li {
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding-left: 40px;
+
+    }
+} 
+
+/**
+    ESTILOS PARA EL FICHERO INDEX
+    -----------------------------
+**/
+
+body {
+    background-color: #FFF7E8;
+}
+
+
+/** SECCIÓN COOKING-TODAY **/
+
+#cooking-today {
+    width: 100%;
+    text-align: center;
+    background-image: url(../img/knife-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    min-width: 400px;
+}
+
+#cooking-today h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #2A2A2A;
+}
+
+.search-bar {
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-bar form {
+    width: 100%;
+}
+  
+.search-bar img {
+    position:absolute;
+    top: 13px;
+    left: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 15px 5px 15px 40px;
+    border-radius: 5px;
+    border: 2px solid #79BAAB;
+    font-size: 1rem;
+}
+
+/** SECCIÓN LATEST-MEALS **/
+
+#latest-meals {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#latest-meals h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2A2A2A;
+    font-weight: 900;
+    border-bottom: 3px solid #2A2A2A; 
+    line-height: 0.1em;
+    margin: 10px 0 40px; 
+}
+
+#latest-meals h1 span { 
+    background:#FFF7E8; 
+    padding:0 10px; 
+}
+
+#latest-meals .meals {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-column-gap: 5%;
+    grid-row-gap: 10px;
+}
+
+#latest-meals .meal h2 {
+    font-size: 1.1rem;
+    color: #2A2A2A;
+    font-weight: 900;
+}
+
+#latest-meals .meal img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 992px) {
+
+    #latest-meals .meals {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+        grid-column-gap: 2%;
+        grid-row-gap: 10px;
+    }
+}
+
+/** SECCIÓN SHOP **/
+
+#shop {
+    padding: 10px;
+    background-image: url(../img/shop-bg.jpg);
+    background-size: 150%;
+    text-align: center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+}
+
+.shop-inside {
+    background-color: #FFF;
+    width: 90%;
+    height: auto;
+    min-width: 200px;
+    margin: 30px auto;
+    padding: 50px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+#shop h1 {
+    font-size: 2rem;
+    color: #2A2A2A;
+    font-weight: 900;
+    border-bottom: 3px solid #2A2A2A; 
+    line-height: 0.1em;
+}
+
+#shop h1 span { 
+    background:#FFF; 
+    padding:0 10px; 
+}
+
+.shop-inside p {
+    font-size: 1rem;
+}
+
+.shop-inside p:first-of-type {
+    margin-top: 40px;
+}
+
+#shop a {
+    color: #EB9781;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 992px) {
+
+    #shop {
+        background-size: cover;
+    }
+
+    .shop-inside {
+        width: 70%;
+    }
+
+    #shop h1 {
+        width: 70%;
+        margin: auto;
+    } 
+} 
+
+/** SECCIÓN PICK-WEEK **/
+
+#pick-week {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:#2A2A2A;
+    padding: 10px;
+}
+
+#pick-week h4 {
+    font-weight: 400;
+    margin: 0;
+}
+
+#pick-week h1 {
+    margin: 0 0 20px 0;
+    font-size: 2.4rem;
+}
+
+#pick-week p {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+#pick-week a {
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #79BAAB;
+    background-color: #FFF;
+    color: #79BAAB;
+}
+
+#pick-week img {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 992px) {
+    #pick-week {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .pick-week-text {
+        width: 40%;
+    }
+
+    #pick-week img {
+        width: 50%;
+        margin: 0;
+        height: auto;
+    }
+
+    #pick-week h1 {
+        font-size: 2rem;
+    }
+    
+    #pick-week p {
+        margin-bottom: 40px;
+        font-size: 1rem;
+    }
+
+}
+
+/**
+    ESTILOS PARA EL FICHERO RECIPES Y SHOP
+    --------------------------------------
+**/
+
+.main-recipes, .main-shop {
+    margin-bottom: 20px;
+}
+
+.main-recipes, .main-shop h1,p{
+    text-align: center;
+}
+
+.recipes-page, .shop-page {
+    display: flex;
+}
+
+@media screen and (min-width: 992px) {
+
+    .main-recipes, .main-shop h1,p {
+        text-align: start;
+    }
+}
+
+/** SECCIÓN BROWSE FILTERS **/
+#filters {
+    display: none;
+    background-color: #FFF;
+    padding: 10px;
+}
+
+@media screen and (min-width: 992px) {
+    #filters {
+        display: initial;
+        width: 25%;
+        margin-right: 20px;
+    }
+
+    #filters input {
+        margin-bottom: 10px;
+    }
+
+    #filters .search-bar {
+        width: 100%;
+    }
+}
+
+
+/** SECCIÓN BROWSE RECIPES **/
+
+.browse-items {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.browse-items .items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-column-gap: 5%;
+    grid-row-gap: 10px;
+}
+
+.browse-items .items a h2 {
+    font-size: 1.1rem;
+    color: #2A2A2A;
+}
+
+.browse-items .item a:hover h2 {
+    color: #79BAAB;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.paginacion {
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.paginacion ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.paginacion li {
+    list-style-type: none; 
+    text-align: center;
+    margin-right: 10px;
+}
+
+.paginacion li a {
+    font-weight: 600;
+    color: #79BAAB;
+}
+
+.paginacion li a:hover {
+    color: #C5E1DB;
+}
+
+.paginacion li:first-of-type a {
+    color: #2A2A2A;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+    .browse-items{
+        max-width: 75%;
+    }
+    .browse-items .items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 31% 31% 31%;
+        grid-column-gap: 3%;
+        grid-row-gap: 10px;
+    }
+}
+
+
+
+/**
+    ESTILOS PARA EL FICHERO VIDEOS
+    ------------------------------
+**/
+
+.main-videos {
+    padding: 10px;
+    text-align: center;
+}
+
+#videos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 5%;
+    grid-row-gap: 10px;
+}
+
+#videos .video {
+    background-color: #FFF;
+    min-height: 400px;
+    padding: 10px;
+}
+
+#videos iframe {
+    width: 100%;
+    height: 60%;
+    border: 0px;
+}
+
+#videos .video p {
+    font-size: .9rem;
+}
+
+
+@media screen and (min-width: 992px) {
+
+    .main-videos {
+        text-align: start;
+    }
+    #videos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 2%;
+        grid-row-gap: 10px;
+    }
+}
+
+
+
+
+/**
+    ESTILOS PARA EL NEWSLETTER
+    --------------------------
+**/
+
+#newsletter {
+    background-color: rgb(121, 186, 171);    
+    text-align: center;
+    min-width: 400px;
+}
+
+.bg-opacity{
+    position: relative;
+    background-color: #000;
+}
+
+
+.bg-opacity::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.2;
+    background: url(../img/doodle.png);
+}
+
+#newsletter .contenido{
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    width: 450px;
+    color: #2A2A2A;
+}
+
+#newsletter h1 {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+#newsletter p {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+#newsletter input {
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: .9rem;
+    margin-right: 5px;
+    width: 300px;
+}
+
+#newsletter button {
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: #DC4A23;
+    font-size: .9rem;
+    width: 100px;
+}
+
+#newsletter button:hover {
+    background-color: #EB9781;
+}
+
+/**
+    ESTILOS PARA EL NEWSLETTER - LG
+    -------------------------------
+**/
+
+@media screen and (min-width: 992px) {
+
+    #newsletter h1 {
+        font-size: 1.8rem;
+    }
+
+    #newsletter p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #newsletter input {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #newsletter button {
+        padding: 10px 20px;
+        width: 100px;
+        font-size: 1rem;
+    }
+} 
+
+/**
+    ESTILOS PARA EL FOOTER
+    ----------------------
+**/
+
+footer {
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #2A2A2A;
+    min-width: 400px;
+}
+
+footer .contenido:first-of-type > p {
+    font-weight: 600;
+}
+
+footer .contenido:last-of-type p:first-of-type {
+    font-size: 0.8rem;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    list-style-type: none; 
+    text-align: center;
+    font-size: 0.8rem;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+footer a {
+    color: #FFF;
+}
+
+footer img {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+footer hr {
+    min-width: 380px; 
+    width: 95%;
+    border: 1px solid #5c5c5c;
+}
+
+footer a:hover { 
+    color: #79BAAB;
+}
+
+footer .social a:hover {
+    opacity: .7;
+}
+
+/**
+    ESTILOS PARA EL FOOTER - LG
+    ---------------------------
+**/
+
+@media screen and (min-width: 992px) {
+    footer .contenido {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer .social {
+        display: flex;
+        align-content: flex-end;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    footer img {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    footer ul {
+        flex-grow: 2;
+        justify-content: flex-end;
+    }
+
+    footer li {
+        text-align: end;
+        padding: 0;
+        padding-left: 20px;
+    }
+
+    footer hr {
+        max-width: 1200px; 
+    }
+} 
